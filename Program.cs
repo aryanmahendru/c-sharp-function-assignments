@@ -1,4 +1,4 @@
-﻿//Functions assignment 
+//Functions assignment 
 
 List<int> list = new List<int>{72,3,2,1};
 //contains
@@ -39,21 +39,15 @@ Console.WriteLine("index of number is "+index);
 
 //indexofmin
 int indexofmin(List<int> bList){
-   int indexxx=-1;
-   int max=0;
-   for (int a=0;a<bList.Count;a++){
-       if (max<bList[a]){
-         max=bList[a];
-       }
-   }
-
-   for(int h=0;h<bList.Count;h++){
-      if(bList[h]<max){
-         indexxx=h;
-    
+   int minnumber=list[0];
+   int minindex=0;
+   for(int p=0;p<bList.Count;p++){
+      if(bList[p]<minnumber){
+         minnumber=bList[p];
+         minindex=p;
       }
    }
-   return indexxx;
+   return minindex;
 }
 Console.WriteLine("index of minimum number is "+indexofmin(list));
 
